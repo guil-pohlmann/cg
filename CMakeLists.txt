@@ -61,6 +61,9 @@ set(EXERCISE
 		two_triangles
 		two_triangles_vao_vbo
 		3d_model_camera
+		3d_model_scale
+		3d_model_rotation
+		3d_model_translate
 )
 
 foreach(EXERCISE ${EXERCISE})
