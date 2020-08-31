@@ -66,15 +66,17 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 int main () {
     GLfloat vertices[] = {
             // positions          // colors
-            0.5f,  0.5f, 0.5f,   1.0f, 1.0f, 1.0f,
-            0.5f, -0.5f, 0.5f,   1.0f, 0.0f, 1.0f,
-            -0.5f, -0.5f, 0.5f,   0.0f, 0.0f, 1.0f,
-            -0.5f,  0.5f, 0.5f,   1.0f, 1.0f, 0.0f,
+            1.0f,  1.0f, 1.0f,   1.0f, 1.0f, 1.0f,
+            1.0f, -1.0f, 1.0f,   1.0f, 0.0f, 1.0f,
+            -1.0f, -1.0f, 1.0f,   0.0f, 0.0f, 1.0f,
+            -1.0f,  1.0f, 1.0f,   1.0f, 1.0f, 0.0f,
             // positions          // colors
-            0.5f,  0.5f, -0.5f,   1.0f, 1.0f, 0.0f,
-            0.5f, -0.5f, -0.5f,   1.0f, 0.0f, 0.0f,
-            -0.5f, -0.5f, -0.5f,   0.0f, 0.0f, 0.0f,
-            -0.5f,  0.5f, -0.5f,   0.0f, 1.0f, 0.0f
+            1.0f,  1.0f, -1.0f,   1.0f, 1.0f, 0.0f,
+            1.0f, -1.0f, -1.0f,   1.0f, 0.0f, 0.0f,
+            -1.0f, -1.0f, -1.0f,   0.0f, 0.0f, 0.0f,
+            -1.0f,  1.0f, -1.0f,   0.0f, 1.0f, 0.0f,
+            // positions          // colors
+            0.0f,  2.0f, 0.0f,   1.0f, 1.0f, 0.0f,
     };
     unsigned int index[] = {
             3, 1, 0,  // near / front
@@ -88,7 +90,12 @@ int main () {
             6, 1, 2, // bottom
             1, 6, 5,
             6, 3, 7,
-            3, 6, 2
+            3, 6, 2,
+            0, 3, 8, // top pyramid
+            0, 4, 8,
+            4, 7, 8,
+            7, 0, 8
+
     };
 
     GlfwConfig glfw;
