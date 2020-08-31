@@ -19,39 +19,22 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
 
-    if (key == GLFW_KEY_M && action == GLFW_PRESS)
-    {
-        gWireframe = !gWireframe;
-        if (gWireframe)
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        else
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    }
-
-    if (key == GLFW_KEY_A && action == GLFW_PRESS)
+    if (key == GLFW_KEY_LEFT && action == GLFW_PRESS)
     {
         dx -= 1.0;
     }
 
-    else if (key == GLFW_KEY_D && action == GLFW_PRESS)
+    else if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
     {
         dx += 1.0;
     }
-    else if (key == GLFW_KEY_W && action == GLFW_PRESS)
-    {
-        dy += 1.0;
-    }
-    else if (key == GLFW_KEY_S && action == GLFW_PRESS)
-    {
-        dy -= 1.0;
-    }
-    else if (key == GLFW_KEY_Q && action == GLFW_PRESS)
-    {
-        dz += 1.0;
-    }
-    else if (key == GLFW_KEY_Z && action == GLFW_PRESS)
+    else if (key == GLFW_KEY_UP && action == GLFW_PRESS)
     {
         dz -= 1.0;
+    }
+    else if (key == GLFW_KEY_DOWN && action == GLFW_PRESS)
+    {
+        dz += 1.0;
     }
     else if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
     {
@@ -95,6 +78,7 @@ int main () {
             0, 4, 8,
             4, 7, 8,
             7, 0, 8
+
     };
 
     GlfwConfig glfw;

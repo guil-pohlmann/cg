@@ -64,6 +64,7 @@ set(EXERCISE
 		3d_model_scale
 		3d_model_rotation
 		3d_model_translate
+		3d_model_camera_rotation
 )
 
 foreach(EXERCISE ${EXERCISE})
